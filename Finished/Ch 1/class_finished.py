@@ -40,7 +40,7 @@ print("Book types: ", Book.get_book_types())
 
 # TODO: Create some book instances
 b1 = Book("Title 1", "HARDCOVER")
-b2 = Book("Title 2", "PAPERBACK")
+b2 = Book("Title 2", "EBOOK")
 
 # TODO: Use the static method to access a singleton object
 thebooks = Book.get_booklist()
