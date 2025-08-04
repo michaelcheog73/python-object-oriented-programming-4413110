@@ -4,7 +4,7 @@
 from dataclasses import dataclass
 from abc import ABC, abstractmethod
 
-@dataclass
+@dataclass(eq=False)
 class Asset(ABC):
     price: float
 
@@ -13,7 +13,7 @@ class Asset(ABC):
        pass
     
 
-@dataclass
+@dataclass(eq=False)
 class Stock(Asset):
     ticker: str
     company: str
@@ -21,7 +21,7 @@ class Stock(Asset):
     def __lt__(self, other):
         return self.price < other.price
 
-@dataclass
+@dataclass(eq=False)
 class Bond(Asset):
     description: str
     duration: int
